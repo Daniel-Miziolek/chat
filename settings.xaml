@@ -1,0 +1,15 @@
+﻿<Window x:Class="chat1.settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:chat1"
+        mc:Ignorable="d"
+        Title="settings" Height="210" Width="323" Background="#FF070E21">
+    <Grid>
+        <TextBox Name="name" MaxLength="8" HorizontalAlignment="Center" Margin="0,71,0,0" TextWrapping="Wrap" Text="name" VerticalAlignment="Top" Width="120" Background="#FF15193C" Foreground="White"/>
+        <Button Content="Zastosuj" Name="but" HorizontalAlignment="Left" Margin="224,141,0,0" VerticalAlignment="Top" Click="but_Click" Background="#FF15193C" Foreground="White"/>
+
+    </Grid>
+</Window>

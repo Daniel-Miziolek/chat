@@ -7,6 +7,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Windows.Controls;
 using MahApps.Metro.Controls;
+using System.Windows.Input;
 
 namespace chat1
 {
@@ -90,7 +91,7 @@ namespace chat1
                     int bytesRead = stream.Read(buffer, 0, buffer.Length);
                     if (bytesRead == 0)
                     {
-                        break; 
+                        break;
                     }
                     string message = Encoding.ASCII.GetString(buffer, 0, bytesRead);
 
@@ -144,11 +145,7 @@ namespace chat1
             }
         }
 
-        private void buttonSend_Click(object sender, RoutedEventArgs e)
-        {
-            string message = user.Content + " " + DateTime.Now.ToString("HH:mm") + "\n" + textBox2.Text;
-            SendMessage(message);
-        }
+        
 
         private void set_Click(object sender, RoutedEventArgs e)
         {
@@ -188,6 +185,15 @@ namespace chat1
                 {
                     MessageBox.Show($"Disconnection failed: {ex.Message}", "Warning", MessageBoxButton.OK, MessageBoxImage.Error);
                 });
+            }
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                string message = user.Content + " " + DateTime.Now.ToString("HH:mm") + "\n" + textBox2.Text;
+                SendMessage(message);
             }
         }
     }

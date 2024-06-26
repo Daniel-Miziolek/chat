@@ -6,10 +6,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:chat1"
         mc:Ignorable="d"
-        Title="settings" Height="210" Width="323" Background="#FF070E21">
+        Title="settings" Height="210" Width="323" Background="#FF1F232D" Icon="/chat.png">
     <Grid>
-        <TextBox Name="name" MaxLength="8" HorizontalAlignment="Center" Margin="0,71,0,0" TextWrapping="Wrap" Text="name" VerticalAlignment="Top" Width="120" Background="#FF15193C" Foreground="White"/>
-        <Button Content="Zastosuj" Name="but" HorizontalAlignment="Left" Margin="224,141,0,0" VerticalAlignment="Top" Click="but_Click" Background="#FF15193C" Foreground="White"/>
+        <TextBox Name="name" MaxLength="8" HorizontalAlignment="Center" Margin="0,71,0,0" TextWrapping="Wrap" Text="name" VerticalAlignment="Top" Width="120" Background="#FF2D2E40" Foreground="White"/>
+        <Button Content="Zastosuj" Name="but" HorizontalAlignment="Left" Margin="224,141,0,0" VerticalAlignment="Top" Click="but_Click" Background="#FF2D2E40" Foreground="White"/>
 
     </Grid>
 </Window>

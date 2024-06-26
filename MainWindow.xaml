@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:chat1"
         mc:Ignorable="d"
-        Title="user1" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="#FF070E21" Icon="/send-message.png">
+        Title="chat" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="#FF1F232D" Icon="/chat.png">
     <Window.Resources>
         <Style x:Key="ListViewItemStyle" TargetType="{x:Type ListViewItem}">
             <Style.Triggers>
@@ -20,24 +20,18 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Button Name="button1" Content="join" HorizontalAlignment="Left" Margin="51,263,0,0" VerticalAlignment="Top" Height="26" Click="button1_Click" Width="177" BorderBrush="{x:Null}" Background="#FF15193C" Foreground="White"/>
-        <ListView Name="listBox1" Margin="323,10,59,94" BorderBrush="Black" Background="#FF15193C" Foreground="White" ItemContainerStyle="{StaticResource ListViewItemStyle}">
+        <Button Name="button1" Content="join" HorizontalAlignment="Left" Margin="34,84,0,0" VerticalAlignment="Top" Height="26" Click="button1_Click" Width="177" BorderBrush="{x:Null}" Background="#FF2D2E40" Foreground="White"/>
+        <ListView Name="listBox1" Margin="257,0,0,62" BorderBrush="{x:Null}" Background="#FF2D2E40" Foreground="White" ItemContainerStyle="{StaticResource ListViewItemStyle}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Message}" TextWrapping="Wrap" Foreground="White"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <TextBox Name="textBox2" HorizontalAlignment="Left" Margin="323,369,0,0" TextWrapping="Wrap" Text="Text" VerticalAlignment="Top" Width="381" Height="20" Background="#FF15193C" Foreground="White"/>
-        <Button Content="" HorizontalAlignment="Left" Margin="709,368,0,0" VerticalAlignment="Top" Width="32" Click="buttonSend_Click" BorderBrush="{x:Null}">
-            <Button.Background>
-                <ImageBrush ImageSource="/send-message.png"/>
-            </Button.Background>
-        </Button>
-        <Button Name="button2" Content="create" HorizontalAlignment="Left" Margin="51,294,0,0" VerticalAlignment="Top" Height="26" RenderTransformOrigin="0.553,0.641" Width="177" Click="button2_Click" BorderBrush="{x:Null}" Background="#FF15193C" Foreground="White"/>
-        <Label Content="user" Name="user" FontSize="19" HorizontalAlignment="Left" Margin="117,217,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Image HorizontalAlignment="Left" Height="110" Margin="84,102,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.52,0.52" OpacityMask="Black" Source="/user (1).png"/>
-        <Button Content="" Name="set" HorizontalAlignment="Left" Margin="255,1,0,0" VerticalAlignment="Top" Width="51" BorderBrush="{x:Null}" Click="set_Click" RenderTransformOrigin="0.5,0.5" Height="50">
+        <Button Name="button2" Content="create" HorizontalAlignment="Left" Margin="34,127,0,0" VerticalAlignment="Top" Height="26" RenderTransformOrigin="0.553,0.641" Width="177" Click="button2_Click" BorderBrush="{x:Null}" Background="#FF2D2E40" Foreground="White"/>
+        <Label Content="user" Name="user" FontSize="13" HorizontalAlignment="Left" Margin="90,353,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Image HorizontalAlignment="Left" Height="44" Margin="34,345,0,0" VerticalAlignment="Top" Width="51" RenderTransformOrigin="0.52,0.52" OpacityMask="Black" Source="/user (1).png"/>
+        <Button Content="" Name="set" HorizontalAlignment="Left" Margin="185,356,0,0" VerticalAlignment="Top" Width="29" BorderBrush="{x:Null}" Click="set_Click" RenderTransformOrigin="0.5,0.5" Height="23">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -50,14 +44,17 @@
                 <ImageBrush ImageSource="/cogwheel.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" Name="clear" HorizontalAlignment="Left" Margin="725,10,0,0" VerticalAlignment="Top" Width="44" BorderBrush="{x:Null}" Click="clear_Click" Height="40">
+        <Button Content="" Name="clear" HorizontalAlignment="Left" Margin="224,355,0,0" VerticalAlignment="Top" Width="28" BorderBrush="{x:Null}" Click="clear_Click" Height="25">
             <Button.Background>
                 <ImageBrush ImageSource="/bin.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="dis" Content="disconnect" HorizontalAlignment="Left" Margin="51,325,0,0" VerticalAlignment="Top" Height="26" RenderTransformOrigin="0.553,0.641" Width="177" Click="dis_Click" BorderBrush="{x:Null}" Background="#FF15193C" Foreground="White"/>
-        <StackPanel Margin="10,10,531,364" Background="#FF15193C">
-            <Label Content="CHAT SYSTEM" HorizontalContentAlignment="Center" FontSize="24" Foreground="White" FontFamily="Arial Black"/>
+        <Button x:Name="dis" Content="disconnect" HorizontalAlignment="Left" Margin="34,166,0,0" VerticalAlignment="Top" Height="26" RenderTransformOrigin="0.553,0.641" Width="177" Click="dis_Click" BorderBrush="{x:Null}" Background="#FF2D2E40" Foreground="White"/>
+        <StackPanel Margin="19,5,562,369">
+            <Label Content="CHAT SYSTEM" HorizontalContentAlignment="Center" FontSize="24" Foreground="White" FontFamily="Arial Black" Background="{x:Null}" Width="206"/>
+        </StackPanel>
+        <StackPanel Margin="258,345,0,0"  Background="#FF2D2E40">
+            <TextBox x:Name="textBox2" KeyDown="textBox2_KeyDown" TextWrapping="Wrap"  Text="Text" Width="445" Height="20" Background="#FF1F232D" Foreground="White"/>
         </StackPanel>
     </Grid>
 </Window>
